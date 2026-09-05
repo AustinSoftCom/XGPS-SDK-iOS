@@ -65,20 +65,20 @@
     enum GPS_MODULE gpsModule;
 
     // This is the raw GPS data available from the XGPS150
-//	NSNumber	*alt;                       // Altitude in meters
+	float       alt;                       // Altitude in meters
 	NSMutableString	*utc;                       // UTC time of latest position sample
 	int         fixType;                   // 1 = position fix not available, 2 = 2D fix, 3 = 3D fix
 	int         numOfSatInUse;             // Number of satellites in use (not the number in view)
-//	NSNumber	*numOfSatInView;            // The total number of satellites in view
-//	float	*hdop;                      // Horizontal dilution of position, float. More info in Puck.m.
-//	float	*vdop;                      // Vertical dilution of position, float
-//	float	*pdop;                      // Postional (3D) dilution of position, float
-//	NSNumber	*trackTrue;                 // Track in degrees (true north), float
-//	NSNumber	*trackMag;                  // Track in degrees (magnetic north), float. NOTE: the current chipset does not
-                                            // provide magnetic heading info. Until the chipset is updated, trackMag will
-                                            // always equal trackTrue.
-//	NSNumber	*speedKnots;                // Speed in knots, float
-//	NSNumber	*speedKph;                  // Speed in km/hr, float
+	int         numOfSatInView;            // The total number of satellites in view
+	float       hdop;                      // Horizontal dilution of position, float. More info in Puck.m.
+	float       vdop;                      // Vertical dilution of position, float
+	float       pdop;                      // Postional (3D) dilution of position, float
+	float       trackTrue;                 // Track in degrees (true north), float
+	float       trackMag;                 // Track in degrees (magnetic north), float. NOTE: the current chipset does not
+										   // provide magnetic heading info. Until the chipset is updated, trackMag will
+										   // always equal trackTrue.
+	float       speedKnots;                // Speed in knots, float
+	float       speedKph;                  // Speed in km/hr, float
 	bool		speedAndCourseIsValid;		// Whether the speed and course data is valid or not
 	NSMutableArray		*latDegMinDir;		// A 3 element array containing degrees, minutes and a "N" or "S" character.
                                             // Degrees will be an integer (0-359) stored as an NSNumber. Minutes will always
